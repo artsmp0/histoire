@@ -38,6 +38,12 @@ const value = ref('Foo')
     icon-color="#8B5CF6"
   >
     <Variant
+      id="none"
+      title="测试中文搜索"
+    >
+      123123
+    </Variant>
+    <Variant
       id="html"
       title="html"
       icon="carbon:code"

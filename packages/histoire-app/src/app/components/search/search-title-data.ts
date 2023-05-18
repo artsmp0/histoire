@@ -3,6 +3,7 @@ import { searchData as _searchData, onUpdate as _onUpdate } from 'virtual:$histo
 import type { SearchData } from './types.js'
 
 export const searchData: SearchData = markRaw(_searchData)
+console.log('searchData: ', searchData)
 
 export function onUpdate (cb: (data: SearchData) => unknown) {
   _onUpdate(cb)

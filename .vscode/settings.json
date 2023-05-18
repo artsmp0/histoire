@@ -2,6 +2,7 @@
   "tailwindCSS.experimental.configFile": {
     "tailwind.config.cjs": "docs/**",
     "packages/histoire-app/tailwind.config.cjs": "packages/histoire-app/**",
-    "packages/histoire-controls/tailwind.config.cjs": "packages/histoire-controls/**",
-  }
+    "packages/histoire-controls/tailwind.config.cjs": "packages/histoire-controls/**"
+  },
+  "prettier.enable": false
 }

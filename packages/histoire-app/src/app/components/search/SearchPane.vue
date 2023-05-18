@@ -80,6 +80,7 @@ async function loadSearchIndex (data: SearchData) {
   titleSearchIndex = createIndex()
 
   for (const key of Object.keys(data.index)) {
+    console.log('key: ', key, data.index[key])
     await titleSearchIndex.import(key, data.index[key])
   }
 
@@ -111,6 +112,7 @@ async function loadDocSearchIndex () {
   }
 
   const searchDataModule = await DocSearchData()
+  console.log('searchDataModule: ', searchDataModule)
 
   load(searchDataModule.searchData)
   // Handle HMR
@@ -128,6 +130,7 @@ const titleResults = ref<SearchResult[]>([])
 watch(rateLimitedSearch, async value => {
   const list: SearchResult[] = []
   const raw = await titleSearchIndex.search(value)
+  console.log('raw: ', raw)
   let rank = 0
   for (const field of raw) {
     for (const id of field.result) {
